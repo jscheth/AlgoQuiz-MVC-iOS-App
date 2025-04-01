@@ -19,8 +19,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cot-8g-TOt">
                                 <rect key="frame" x="20" y="67" width="400" height="860"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFm-pL-qJA">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="107.66666666666667"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8u-Xt-yUa">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="660"/>
+                                        <rect key="frame" x="0.0" y="117.66666666666669" width="400" height="542.33333333333326"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -80,6 +86,13 @@
                             <constraint firstItem="Cot-8g-TOt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="67" id="wNP-Rh-XWM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="DWr-44-cKd" id="Mzz-fy-dod"/>
+                        <outlet property="progressView" destination="Bdw-6P-8LJ" id="FlS-lt-wvK"/>
+                        <outlet property="questionLabel" destination="J8u-Xt-yUa" id="2LT-N0-SUO"/>
+                        <outlet property="scoreLabel" destination="RFm-pL-qJA" id="Tl6-7w-nNP"/>
+                        <outlet property="trueButton" destination="Es3-ue-DRy" id="c9c-JA-9IP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
