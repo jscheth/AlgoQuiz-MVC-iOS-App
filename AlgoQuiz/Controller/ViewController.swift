@@ -23,18 +23,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        print(sender.configuration?.title ?? "No title")
+        print("Button Pressed: \(sender.configuration?.title ?? "No title")")
+        
         let userAnswer = sender.configuration?.title ?? "No title"
+        print("User Answer: \(userAnswer)")
+        
         let answerCheck = quizLogic.checkAnswer(userAnswer: userAnswer)
-        
-        if answerCheck {
-            sender.backgroundColor = UIColor.green
-        } else {
-            sender.backgroundColor = UIColor.red
+        print("Answer Correct: \(answerCheck)")
+
+        DispatchQueue.main.async {
+            if answerCheck {
+                sender.backgroundColor = UIColor.green
+            } else {
+                sender.backgroundColor = UIColor.red
+            }
         }
-        
+
         quizLogic.nextQuestion()
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.updateUI()
+        }
     }
     
     func updateUI() {
